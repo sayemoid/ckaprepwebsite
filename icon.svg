@@ -1,1 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 192 192"><path fill="#e08524" d="M75.3 73.4H18.4l45.3 34.3L48.3 163l46.1-32.3 48.2 34.6-16.9-58.3 44.9-33.6H115l-20.5-55-19.2 55z"/><path d="m96.7 18.8 18.2 8.2 16.5 44.3h-15.1L96.7 18.8zm-47 146 18.7 9.9 42.6-29.9-16.5-11.4-44.8 31.4zm79.1-56.8 17.4 9.4 18.6 60.1-19.7-11.3-16.3-58.2z"/><path d="m173.1 74.3 17.8 9.2-44.7 34-17.4-9.4 44.3-33.8z"/></svg>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with subtle gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#326CE5;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#326CE5;stop-opacity:0.1"/>
+    </linearGradient>
+    <linearGradient id="k-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E40FF"/>
+      <stop offset="100%" style="stop-color:#A0E1FF"/>
+    </linearGradient>
+    <!-- Kubernetes wheel pattern -->
+    <pattern id="k8s-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 20 L40 20 M20 0 L20 40" stroke="#326CE5" stroke-width="1" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Base circle with gradient -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-gradient)"/>
+  <circle cx="100" cy="100" r="90" fill="url(#k8s-pattern)"/>
+
+  <!-- Main kubernetes helm symbol, modernized -->
+  <g transform="translate(100 100)">
+    <!-- Central octagon -->
+    <path d="M0,-60 L42,-42 L60,0 L42,42 L0,60 L-42,42 L-60,0 L-42,-42 Z"
+          fill="none"
+          stroke="#326CE5"
+          stroke-width="3"
+          transform="rotate(22.5)"/>
+
+    <!-- K symbol -->
+    <g transform="translate(20 00)">
+      <path d="M-40,-30 L-40,30 M-40,0 L20,-40 M-40,0 L20,40"
+          stroke="url(#k-gradient)"
+          stroke-width="16"
+          stroke-linecap="round"
+          fill="none"
+          filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- Orbiting elements suggesting both atomic structure and learning progression -->
+  <g transform="translate(100 100)">
+    <circle cx="0" cy="-75" r="8" fill="#326CE5" opacity="0.8"/>
+    <circle cx="65" cy="37.5" r="8" fill="#326CE5" opacity="0.6"/>
+    <circle cx="-65" cy="37.5" r="8" fill="#326CE5" opacity="0.4"/>
+
+    <!-- Connecting lines -->
+    <path d="M0,-75 A75,75 0 0,1 65,37.5" fill="none" stroke="#326CE5" stroke-width="2" opacity="0.3"/>
+    <path d="M65,37.5 A75,75 0 0,1 -65,37.5" fill="none" stroke="#326CE5" stroke-width="2" opacity="0.3"/>
+    <path d="M-65,37.5 A75,75 0 0,1 0,-75" fill="none" stroke="#326CE5" stroke-width="2" opacity="0.3"/>
+  </g>
+</svg>
